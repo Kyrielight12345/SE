@@ -28,10 +28,10 @@
                         <a href="<?php echo base_url('home/index_guru'); ?>"><i class="feather-grid"></i> <span> Dashboard</span></span></a>
                     </li>
                     <li class="menu">
-                        <a href="#"><i class="fas fa-book-reader"></i> <span> Profil </span></span></a>
+                        <a href=""><i class="fas fa-book-reader"></i> <span> Profil </span></span></a>
                     </li>
                     <li class="menu">
-                        <a href="#"><i class="fas fa-book-reader"></i> <span> Data Absen </span></span></a>
+                        <a href="<?php echo base_url('absen'); ?>"><i class="fas fa-book-reader"></i> <span> Data Absen </span></span></a>
                     </li>
                     <li class="submenu">
                         <a href="#"><i class="fas fa-clipboard"></i> <span> Management Kelas</span> <span class="menu-arrow"></span></a>
