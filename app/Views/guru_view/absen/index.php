@@ -4,40 +4,16 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-sub-header">
-                        <h3 class="page-title">Management Nilai</h3>
+                        <h3 class="page-title">Management Absen</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Management Nilai</li>
+                            <li class="breadcrumb-item active">Management Absen</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="student-group-form">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search by NIS ...">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search by Nama ...">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search by Kelas ...">
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="search-student-btn">
-                        <button type="btn" class="btn btn-primary">Search</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-table comman-shadow">
@@ -46,12 +22,7 @@
                         <div class="page-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h3 class="page-title">Students</h3>
-                                </div>
-                                <div class="col-auto text-end float-end ms-auto download-grp">
-
-                                    <a href="<?php echo base_url('nilai/create'); ?>" class="btn btn-outline-primary me-2"><i class="fas fa-plus"></i> Tambah</a>
-                                    <a href="<?php echo base_url('nilai/create'); ?>" class="btn btn-outline-primary me-2"><i class="fas fa-minus"></i> Hapus</a>
+                                    <h3 class="page-title">Presensi</h3>
                                 </div>
                             </div>
                         </div>
