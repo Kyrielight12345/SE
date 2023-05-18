@@ -14,11 +14,11 @@
             </div>
         </div>
 
+        <?php echo form_open_multipart('absen/update'); ?>
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-table comman-shadow">
                     <div class="card-body">
-
                         <div class="page-header">
                             <div class="row align-items-center">
                                 <div class="col">
@@ -26,24 +26,6 @@
                                 </div>
                             </div>
                         </div>
-                        <?php
-                        if (!empty(session()->getFlashdata('success'))) { ?>
-                            <div class="alert alert-success">
-                                <?php echo session()->getFlashdata('success'); ?>
-                            </div>
-                        <?php } ?>
-
-                        <?php if (!empty(session()->getFlashdata('info'))) { ?>
-                            <div class="alert alert-info">
-                                <?php echo session()->getFlashdata('info'); ?>
-                            </div>
-                        <?php } ?>
-
-                        <?php if (!empty(session()->getFlashdata('warning'))) { ?>
-                            <div class="alert alert-warning">
-                                <?php echo session()->getFlashdata('warning'); ?>
-                            </div>
-                        <?php } ?>
                         <div class="table-responsive">
                             <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
                                 <thead class="student-thread">
@@ -54,6 +36,8 @@
                                         <th>Hadir</th>
                                         <th>Sakit/ijin</th>
                                         <th>Alpha</th>
+                                        <th>Total</th>
+                                        <th>Presentase</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,20 +46,19 @@
                                             <td><?php echo $key + 1; ?></td>
                                             <td><?php echo $row['nama_siswa']; ?></td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Hadir
-                                                    </button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Hadir</a>
-                                                        <a class="dropdown-item" href="#">Sakit</a>
-                                                        <a class="dropdown-item" href="#">Alpha</a>
-                                                    </div>
-                                                </div>
+                                                <select name="absen" id="bhs">
+                                                    <option value="">PILIH</option>
+                                                    <option value="hadir">Hadir</option>
+                                                    <option value="ijin">Sakit / Ijin</option>
+                                                    <option value="alpha">Alpha</option>
+                                                    </optgroup>
+                                                </select>
                                             </td>
                                             <td><?php echo $row['HADIR']; ?></td>
                                             <td><?php echo $row['IJIN']; ?></td>
                                             <td><?php echo $row['ALPHA']; ?></td>
+                                            <td><?php echo $row['total']; ?></td>
+                                            <td><?php echo $row['presentase']; ?> %</td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
@@ -107,5 +90,6 @@
                 </div>
             </div>
         </div>
+        <?php echo form_close(); ?>
     </div>
 </div>
