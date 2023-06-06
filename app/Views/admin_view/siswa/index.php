@@ -49,9 +49,9 @@
                                     <h3 class="page-title">Students</h3>
                                 </div>
                                 <div class="col-auto text-end float-end ms-auto download-grp">
-                            
+
                                     <a href="<?php echo base_url('siswa/create'); ?>" class="btn btn-outline-primary me-2"><i class="fas fa-plus"></i> Tambah</a>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($siswa as $key => $row)  { ?>
+                                    <?php foreach ($siswa as $key => $row) { ?>
                                         <tr>
                                             <td><?php echo $key + 1; ?></td>
                                             <td><?php echo $row['nis']; ?></td>
@@ -86,7 +86,7 @@
                                             <td><?php echo $row['no_hp']; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url('category/edit/' . $row['nis']); ?>" class="btn btn-sm btn-success">
+                                                    <a href="<?php echo base_url('category/edit/' . 123); ?>" class="btn btn-sm btn-success">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                     <a href="<?php echo base_url('category/delete/' . $row['nis']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin Data Siswa ini?');">

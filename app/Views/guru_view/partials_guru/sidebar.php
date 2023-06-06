@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo base_url('theme'); ?>/assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url('theme'); ?>/assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="<?php echo base_url('theme'); ?>/assets/css/style.css">
-   
+
 </head>
 
 <body>
@@ -28,7 +28,8 @@
                         <a href="<?php echo base_url('home/index_guru'); ?>"><i class="feather-grid"></i> <span> Dashboard</span></span></a>
                     </li>
                     <li class="menu">
-                        <a href=""><i class="fas fa-book-reader"></i> <span> Profil </span></span></a>
+
+                        <a href="<?php echo base_url('guru_p/index/' . 123); ?>"><i class="fas fa-book-reader"></i> <span> Profil </span></span></a>
                     </li>
                     <li class="menu">
                         <a href="<?php echo base_url('absen'); ?>"><i class="fas fa-book-reader"></i> <span> Data Absen </span></span></a>
@@ -44,7 +45,7 @@
                     <li class="submenu">
                         <a href="<?php echo base_url('guru_view/nilai'); ?>"><i class="fas fa-marker"></i> <span> Management Nilai </span> <span class="menu-arrow"></span></a>
                         <ul>
-                            <li><a href="<?php echo base_url('guru_view/nilai'); ?>">Data Nilai</a></li>
+                            <li><a href="<?php echo base_url('nilai'); ?>">Data Nilai</a></li>
                         </ul>
                     </li>
                 </ul>

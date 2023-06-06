@@ -35,6 +35,9 @@ $routes->post('/login/process', 'Login::process');
 $routes->get('/nilai/view_nilai', 'nilai::view_nilai/$1/$2');
 $routes->get('nilai/create', 'nilai::create');
 $routes->post('nilai/store', 'nilai::store');
+$routes->get('/guru_p/index/(:num)', 'guru_p::index/$1');
+$routes->post('guru_p/updateBatch', 'guru_p::updateBatch');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -38,7 +38,7 @@ class Validation extends BaseConfig
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
-   
+
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
@@ -103,6 +103,24 @@ class Validation extends BaseConfig
         ],
         'tahun'    => [
             'required' => 'Tahun wajib diisi.'
+        ]
+    ];
+    public $sk = [
+        'sk' => 'uploaded[sk]|mime_in[sk,jpg,image/jpeg,image/gif,image/png,image/pdf,application/pdf]|max_size[sk,10000]',
+    ];
+
+    public $sk_errors = [
+        'sk' => [
+            'required'  => 'Silahkan Upload SK.',
+        ]
+    ];
+    public $foto = [
+        'foto' => 'uploaded[foto]|mime_in[foto,jpg,image/jpeg,image/gif,image/png]|max_size[foto,10000]',
+    ];
+
+    public $foto_errors = [
+        'foto' => [
+            'required'  => 'Silahkan Upload foto.',
         ]
     ];
 }

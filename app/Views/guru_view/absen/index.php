@@ -9,11 +9,11 @@
                             <li class="breadcrumb-item"><a href="<?php echo base_url('/'); ?>">Home</a></li>
                             <li class="breadcrumb-item active">Management Absen</li>
                         </ul>
+
                     </div>
                 </div>
             </div>
         </div>
-
         <?php echo form_open_multipart('absen/update'); ?>
         <div class="row">
             <div class="col-sm-12">
@@ -26,17 +26,24 @@
                                 </div>
                             </div>
                         </div>
+                        <?php
+                        if (!empty(session()->getFlashdata('success'))) { ?>
+                            <div class="alert alert-success">
+                                <?php echo session()->getFlashdata('success'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="table-responsive">
                             <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
                                 <thead class="student-thread">
                                     <tr>
                                         <th>No</th>
+                                        <th>Nis</th>
                                         <th>Nama</th>
                                         <th>Presensi</th>
                                         <th>Hadir</th>
                                         <th>Sakit/ijin</th>
                                         <th>Alpha</th>
-                                        <th>Total</th>
+                                        <th>Total Kehadiran</th>
                                         <th>Presentase</th>
                                     </tr>
                                 </thead>
@@ -44,14 +51,13 @@
                                     <?php foreach ($presensi as $key => $row) { ?>
                                         <tr>
                                             <td><?php echo $key + 1; ?></td>
+                                            <td><?php echo $row['nis']; ?></td>
                                             <td><?php echo $row['nama_siswa']; ?></td>
                                             <td>
-                                                <select name="absen" id="bhs">
-                                                    <option value="">PILIH</option>
+                                                <select name="keterangan[<?php echo $row['nis']; ?>]" id="">
                                                     <option value="hadir">Hadir</option>
-                                                    <option value="ijin">Sakit / Ijin</option>
+                                                    <option value="ijin">Ijin</option>
                                                     <option value="alpha">Alpha</option>
-                                                    </optgroup>
                                                 </select>
                                             </td>
                                             <td><?php echo $row['HADIR']; ?></td>

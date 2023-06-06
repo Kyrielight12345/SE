@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\absen_guru;
+use App\Models\absenmodel;
 
 class Absen extends BaseController
 {
@@ -24,45 +25,24 @@ class Absen extends BaseController
         echo view('guru_view/absen/index', $data);
     }
 
-    // public function update()
-    // {
-    //     $absen = new absen_guru();
-    //     $nis = $this->request->getVar('nis');
-    //     $hadir = $this->request->getVar('absen');
-    //     $presensihadir = $absen->where([
-    //         $hadir => "hadir",
-    //     ]);
-    //     if ($presensihadir) {
-    //         $db = db_connect();
-    //         $db->query('update presensi set hadir=hadir+1');
-    //     }else{
-    //         $db = db_connect();
-    //         $db->query('update presensi set hadir=hadir-10');
-    //     }
-
-
-    //     $data['presensi'] = $absen->getAbsen();
-    //     // $db = db_connect();
-    //     // $db->query('update presensi set total = total+1');
-    //     echo view('guru_view/absen/index', $data);
-    // }
-    public function update()
+    public function  update()
     {
-        # code...
-        $id = $this->request->getvar('id_absen');
-        $db = db_connect();
-        $h = $db->query('update presensi set hadir=hadir+1');
+        $absenModel = new absenModel();
 
-        $data = array(
-            'hadir'     => $this->request->getPost($h),
-        );
-            $model = new absen_guru();
-            $ubah = $model->updateabsen($data,$id);
-            if($ubah)
-            {
-                session()->setFlashdata('info', 'Updated Category');
-                return redirect()->to(base_url('absen')); 
-            }
-        
+
+        $keterangan = $this->request->getPost('keterangan');
+
+
+        $updateData = [];
+        foreach ($keterangan as $idAbsen => $value) {
+            $updateData[] = [
+                'nis' => $idAbsen,
+                'keterangan' => $value,
+            ];
+        }
+
+
+        $absenModel->updateBatch($updateData, 'nis');
+        return redirect()->to(base_url('absen'));
     }
 }
