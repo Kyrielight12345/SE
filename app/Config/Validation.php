@@ -123,4 +123,18 @@ class Validation extends BaseConfig
             'required'  => 'Silahkan Upload foto.',
         ]
     ];
+
+    public $laporan = [
+        'pertemuan'   => 'required',
+        'materi'   => 'required',
+    ];
+
+    public $laporan_errors = [
+        'pertemuan' => [
+            'required'  => 'pertemuan wajib diisi.',
+        ],
+        'materi'    => [
+            'required' => 'materi wajib diisi.'
+        ]
+    ];
 }

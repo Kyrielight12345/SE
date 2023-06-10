@@ -29,7 +29,7 @@
                     </li>
                     <li class="menu">
 
-                        <a href="<?php echo base_url('guru_p/index/' . 123); ?>"><i class="fas fa-book-reader"></i> <span> Profil </span></span></a>
+                        <a href="<?php echo base_url('guru_p/index/' . session()->get('id_guru')); ?>"><i class="fas fa-book-reader"></i> <span> Profil </span></span></a>
                     </li>
                     <li class="menu">
                         <a href="<?php echo base_url('absen'); ?>"><i class="fas fa-book-reader"></i> <span> Data Absen </span></span></a>
@@ -49,7 +49,7 @@
                         </ul>
                     </li>
                     <li class="menu">
-                        <a href="<?php echo base_url('home/laporan'); ?>"><i class="feather-grid"></i> <span> Laporan Pertemuan</span></span></a>
+                        <a href="<?php echo base_url('laporan/index/' . session()->get('id_guru')); ?>"><i class="feather-grid"></i> <span> Laporan Pertemuan</span></span></a>
                     </li>
                 </ul>
             </div>
