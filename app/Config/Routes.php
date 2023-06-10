@@ -37,6 +37,7 @@ $routes->get('nilai/create', 'nilai::create');
 $routes->post('nilai/store', 'nilai::store');
 $routes->get('/guru_p/index/(:num)', 'guru_p::index/$1');
 $routes->post('guru_p/updateBatch', 'guru_p::updateBatch');
+$routes->get('/nilai_mapel/index/(:num)', 'nilai_mapel::index/$1');
 
 /*
  * --------------------------------------------------------------------

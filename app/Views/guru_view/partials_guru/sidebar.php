@@ -45,8 +45,11 @@
                     <li class="submenu">
                         <a href="<?php echo base_url('guru_view/nilai'); ?>"><i class="fas fa-marker"></i> <span> Management Nilai </span> <span class="menu-arrow"></span></a>
                         <ul>
-                            <li><a href="<?php echo base_url('nilai'); ?>">Data Nilai</a></li>
+                            <li><a href="<?php echo base_url('nilai_mapel'); ?>">Data Nilai</a></li>
                         </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="<?php echo base_url('home/laporan'); ?>"><i class="feather-grid"></i> <span> Laporan Pertemuan</span></span></a>
                     </li>
                 </ul>
             </div>

@@ -26,7 +26,7 @@
                                     <h5 class="form-title student-info">Informasi Guru <span><a href="javascript:;"><i class="feather-more-vertical"></i></a></span></h5>
                                 </div>
                                 <?php foreach ($guru_dan_staf as $key => $row) { ?>
-                                    <input type="hidden" name="id_guru" value="<?php echo $row['id_guru']; ?>">
+                                    <input type="hidden" name="id_guru" value="<?= $row['id_guru']; ?>">
                                     <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
                                             <label>Nama <span class="login-danger">*</span></label>
